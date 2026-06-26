@@ -13,18 +13,15 @@ public class CorsConfig {
     @Bean
     public CorsWebFilter corsWebFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("*");
+        config.addAllowedOrigin("https://help-dashboard.onrender.com");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
-
         config.setAllowCredentials(true);
         config.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
 
-        
-        source.registerCorsConfiguration("/**", config);
         return new CorsWebFilter(source);
     }
 }
