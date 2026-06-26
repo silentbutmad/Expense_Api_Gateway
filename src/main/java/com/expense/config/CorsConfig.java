@@ -13,7 +13,7 @@ public class CorsConfig {
     public CorsWebFilter corsWebFilter() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://help-dashboard.onrender.com");
+        config.addAllowedOrigin("https://help-dashboard1.onrender.com");
         config.addAllowedHeader("*");
         config.addAllowedMethod("GET");
         config.addAllowedMethod("POST");
