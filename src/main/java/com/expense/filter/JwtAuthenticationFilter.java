@@ -18,7 +18,7 @@ public class JwtAuthenticationFilter implements GlobalFilter {
 
         String path = exchange.getRequest().getURI().getPath();
 
-        if (path.startsWith("/auth/") ||
+        if (path.startsWith("/auth/") || path.startsWith("/ocr/")||
                 path.startsWith("/support/") ||
                 path.contains("/login") ||
                 path.contains("/signup")) {
